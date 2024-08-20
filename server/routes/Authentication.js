@@ -10,6 +10,11 @@ router.get("/logout", LogoutUser)
 router.get("/refresh-token", RefreshToken)
 router.post("/forgot-password", ForgotPassword)
 router.post("/reset-password", ResetPassword)
+router.get("/wake", (req, res) => { 
+    console.log('Wake')
+    res.status(200)
+    res.json({status: 'Running'})
+});
 
 
 module.exports = router
